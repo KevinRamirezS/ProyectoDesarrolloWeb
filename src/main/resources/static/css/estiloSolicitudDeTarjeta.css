@@ -1,0 +1,60 @@
+*{
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; 
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.contenido{
+    min-height: 100vh;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+}
+
+.contenido form{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+}
+
+.contenido form .informacion{
+    margin-top: 20px;
+}
+
+.contenido form .informacion span{
+    display: block;
+    color: #999;
+    padding-bottom: 5px;
+}
+
+.contenido form .informacion input,
+.contenido form .informacion select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,.3);
+    color: #444;
+}
+
+.contenido form .desplegable{
+    display: flex;
+    gap:15px;
+}
+
+.contenido form .desplegable .informacion{
+    flex: 1 1 150px;
+}
+
+.contenido form .confirmar{
+    
+}

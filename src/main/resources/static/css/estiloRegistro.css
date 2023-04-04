@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
+body{
+    background-image: url('../imagenes/fondoregistro.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    min-height: 100vh;
+}
+
+.form{
+    background-color: #fff;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4em 3em;
+    border-radius: 10px;
+    text-align: center;
+}
+.registro{
+    background: #3866f2;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .7em 0;
+    border: none;
+    border-radius: .8em;
+}
+
+.cancelar{
+    background: #3866f2;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .5em 0;
+    border: none;
+    border-radius: .8em;
+}
+
+
+
+
