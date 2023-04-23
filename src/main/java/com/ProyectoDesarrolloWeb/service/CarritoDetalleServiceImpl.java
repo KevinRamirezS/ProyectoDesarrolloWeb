@@ -5,7 +5,9 @@ import com.ProyectoDesarrolloWeb.domain.Entrada;
 import com.ProyectoDesarrolloWeb.domain.CarritoDetalle;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CarritoDetalleServiceImpl implements CarritoDetalleService {
 
     @Autowired

@@ -18,6 +18,9 @@ public class EntradaServiceImpl implements EntradaService {
     @Transactional(readOnly = true)//Para manejar transacciones de solo lectura
     public List<Entrada> getEntradas(boolean activos) {
         var lista = (List<Entrada>) entradaDao.findAll();
+        if(activos){
+            lista.removeIf(e -> !e.isActivo());
+        }
         return lista;
 
     }

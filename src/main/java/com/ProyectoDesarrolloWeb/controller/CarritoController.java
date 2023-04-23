@@ -1,4 +1,4 @@
-package com.ProyectoDesarrolloWeb.Controller;
+package com.ProyectoDesarrolloWeb.controller;
 
 import com.ProyectoDesarrolloWeb.domain.Entrada;
 import com.ProyectoDesarrolloWeb.domain.CarritoDetalle;
@@ -12,7 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class CarritoControler {
+public class CarritoController {
 
     @Autowired
     CarritoDetalleService carritoDetalleService;
@@ -20,13 +20,15 @@ public class CarritoControler {
     @Autowired
     EntradaService entradaService;
 
-    @GetMapping("/carrito/agregar/(idEntrada)")
+    @GetMapping("/carrito/agregar/{idEntrada}")
     public String agregar(Entrada entrada, HttpSession session) {
-        Long idCarrito = (Long) session.getAttribute("idCarrito");
+        
+        Long idCarrito = (Long)session.getAttribute("idCarrito");
         entrada = entradaService.getEntrada(entrada);
 
         //Verificar si existe ya el entrada en el carrio
         CarritoDetalle carritoDetalle = carritoDetalleService.getCarritoDetalleEntrada(idCarrito, entrada);
+        
         if (carritoDetalle != null) {
             carritoDetalle.setCantidad(carritoDetalle.getCantidad() + 1);
         } else {
@@ -39,7 +41,8 @@ public class CarritoControler {
 
     @GetMapping("carrito/listado")
     public String listado(Model model, Entrada entrada, HttpSession session) {
-        Long idCarrito = (Long) session.getAttribute("idCarrito");
+        Long idCarrito = (Long)session.getAttribute("idCarrito");
+        
         List<CarritoDetalle> carritoDetalles = carritoDetalleService.getCarritoDetalles(idCarrito);
 
         double montoTotal = 0.0;

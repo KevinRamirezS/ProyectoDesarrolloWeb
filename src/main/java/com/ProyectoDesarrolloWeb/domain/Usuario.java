@@ -21,7 +21,6 @@ public class Usuario implements Serializable {
     String nombre;
     String telefono;
     String correo;
-    String contraseña;
     
     @JoinColumn(name="id_tarjeta", referencedColumnName = "id_tarjeta")
     @ManyToOne
@@ -30,12 +29,11 @@ public class Usuario implements Serializable {
     public Usuario(){
     }
 
-    public Usuario(Long idUsuario, String nombre, String telefono, String correo, String contraseña) {
+    public Usuario(Long idUsuario, String nombre, String telefono, String correo) {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.telefono = telefono;
         this.correo = correo;
-        this.contraseña = contraseña;
     }
     
     
