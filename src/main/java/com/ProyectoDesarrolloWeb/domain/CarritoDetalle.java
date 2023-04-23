@@ -15,18 +15,18 @@ public class CarritoDetalle implements Serializable {
     private Long idDetalle;//Transforma en id_detalle
     private Long idCarrito;//Transforma en id_carrito
     
-    @JoinColumn(name="id_articulo", referencedColumnName= "id_articulo")    
+    @JoinColumn(name="id_entrada", referencedColumnName= "id_entrada")    
     @ManyToOne
-    private Entrada articulo;
+    private Entrada entrada;
     private double precio;
     private int cantidad;
 
     public CarritoDetalle() {
     }
 
-    public CarritoDetalle(Long idCarrito, Entrada articulo, double precio, int cantidad) {
+    public CarritoDetalle(Long idCarrito, Entrada entrada, double precio, int cantidad) {
         this.idCarrito = idCarrito;
-        this.articulo = articulo;
+        this.entrada = entrada;
         this.precio = precio;
         this.cantidad = cantidad;
     }

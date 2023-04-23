@@ -22,11 +22,11 @@ public class EntradaController {
     @Autowired
     //CategoriaService categoriaService;
 
-    @GetMapping("/entrada/listado")
+    @GetMapping("/entradas/entradas")
     public String inicio(Model model) {
         var entradas = entradaService.getEntradas(false);
         model.addAttribute("entradas", entradas);
-        return "/entrada/listado";
+        return "/entradas/entradas";
     }
 
 }

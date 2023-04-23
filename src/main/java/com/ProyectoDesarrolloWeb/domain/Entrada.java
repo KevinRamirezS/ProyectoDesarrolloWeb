@@ -15,7 +15,7 @@ public class Entrada {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idEntrada")
+    @JoinColumn(name="id_entrada", referencedColumnName="id_entrada")
     private Long idEntrada;//Transforma en id_entrada
     private Long idCategoria;
     private String descripcion;
