@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html htmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla :: head">
+        <title>Ticket Friend Online</title>
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"/>
+        <div class="contenido">
+            <h2 th:text="#{entrada.titulo}">Todos los Conciertos</h2>>
+            <br/>
+            <div th:if="${entradas != null and !entradas.empty}">
+                <table border="1">
+                    <thead>             
+                    <th th:text="#{entrada.descripcion}">Descripcion</th>
+                    <th th:text="#{entrada.precio}">Precios</th>
+                    <th th:text="#{entrada.existencias}">Existencias</th>
+                    </thead>
+                    <tbody>
+                        <tr th:each="entrada:${entradas}">
+                            <td th:text="${entrada.descripcion}"></td>
+                            <td th:text="${#numbers.formatDecimal(entrada.precio, 3, 2)}" style="text-align: right"></td>
+                            <td th:text="${entrada.existencias}"style="text-align: center"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div th:if="${entradas == null or entradas.empty}">
+                <p th:text="#{entrada.no_mostrar}">No hay eventos para esta fecha...</p>
+            </div>
+        </div>
+        <footer th:replace="layout/plantilla :: footer"/>
+    </body> 
+</html>
