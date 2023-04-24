@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html htmlns:th="http://www.thymeleaf.org" 
       xmlns="http://www.w3.org/1999/xhtml">
-    <head th:replace="layout/plantilla :: head">
+    <head>
         <title>Ticket Friend Online</title>
+        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <header th:replace="layout/plantilla :: header"/>
-        <div class="contenido">
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="logo nav-link">Ticket Friend Online</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="entradas/entradas">Puntos de Venta</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="acercade.html">Acerca de</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="ayuda.html">Ayuda</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="iniciarsesion.html">Iniciar sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
             <h2 th:text="#{entrada.titulo}">Todos los Conciertos</h2>>
             <br/>
             <div th:if="${entradas != null and !entradas.empty}">
                 <table border="1">
                     <thead>             
-                    <th th:text="#{entrada.descripcion}">Descripcion</th>
-                    <th th:text="#{entrada.precio}">Precios</th>
-                    <th th:text="#{entrada.existencias}">Existencias</th>
+                        <th th:text="#{entrada.descripcion}">Descripcion</th>
+                        <th th:text="#{entrada.precio}">Precios</th>
+                        <th th:text="#{entrada.existencias}">Existencias</th>
                     </thead>
                     <tbody>
                         <tr th:each="entrada:${entradas}">

@@ -4,47 +4,43 @@
     <head>
         <title>Ticket Friend Online</title>
         <meta charset="UTF-8">
-            <link href="css/menu.css" rel="stylesheet" type="text/css"/>
-            
+        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <header th:replace="layout/plantilla :: header"/>
-        <header class="header">
-            <nav class="nav">
+         <header/>
+             <header class="header">
+                <nav class="nav">
                 <a href="index.html" class="logo nav-link">Ticket Friend Online</a>
                 <ul class="nav-menu">
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="puntosdeventa.html">Puntos de Venta</a></li> 
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="acercade.html">Acerca de</a></li> 
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="ayuda.html">Ayuda</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="entradas/entradas">Conciertos</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="general/puntosdeventa">Puntos de Venta</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="general/ayuda">Ayuda</a></li> 
                     <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="iniciarsesion.html">Iniciar sesión</a></li>
                 </ul>
             </nav>
-        </header>
-        <div class="container">
-            <h2 th:text="#{index.titulo}">Todos los conciertos</h2>            
-            <div class="row row-cols-3" th:if="${entradas != null and !entradas.empty}">
-                <div class="card" th:each="entrada : ${entradas}" >
-                    <!--     <img src="/images/equipo1.jpg" class="card-img-top" alt="equipo">  -->
-                    <div class="card-body">
+            <div class="container">
+                <h2 th:text="#{index.titulo}">Todos los conciertos</h2>            
+                <div class="row row-cols-3" th:if="${entradas != null and !entradas.empty}">
+                    <div class="card" th:each="entrada : ${entradas}" >
                         <div class="card-body">
-                            <h5 class="card-title">[[${entrada.descripcion}]]</h5>
-                            <h6 class="card-subtitle mb-2 text-muted text-end">¢[[${#numbers.formatDecimal(entrada.precio, 1, 'DEFAULT', 2, 'DEFAULT')}]]</h6>
-                            <figure>
-                                <img th:src="@{${entrada.rutaImagen}}" height="150" />
-                                <figcaption>
-                                    <a class="card-link" th:href="@{/carrito/agregar/} + ${entrada.idEntrada}">[[#{entrada.comprar}]]</a>
-                                </figcaption>
-                            </figure> 
-                            <p class="card-text">[[${entrada.detalle}]]</p>
-                        </div>
-                    </div>                
+                            <div class="card-body">
+                                <h5 class="card-title">[[${entrada.descripcion}]]</h5>
+                                <h6 class="card-subtitle mb-2 text-muted text-end">¢[[${#numbers.formatDecimal(entrada.precio, 1, 'DEFAULT', 2, 'DEFAULT')}]]</h6>
+                                <figure>
+                                    <img th:src="@{${entrada.rutaImagen}}" height="150" />
+                                    <figcaption>
+                                        <a class="card-link" th:href="@{/carrito/agregar/} + ${entrada.idEntrada}">[[#{entrada.comprar}]]</a>
+                                    </figcaption>
+                                </figure> 
+                                <p class="card-text">[[${entrada.detalle}]]</p>
+                            </div>
+                        </div>                
+                    </div>
+                    <div th:if="${entradas == null or entradas.empty}"  th:text="#{entrada.no_mostrar}">
+                        No tenemos eventos para esta fecha...
+                    </div>
                 </div>
-                <div th:if="${entradas == null or entradas.empty}"  th:text="#{entrada.no_mostrar}">
-                    No tenemos eventos para esta fecha...
-                </div>
-            </div>
-            <footer id="piedePagina">
-                Derechos reservados &COPY; 2023 <address class="lineaDireccion">Tibas, Colima</address> <address class="lineaDireccion">Tel: 8888-9999</address>
-            </footer>
+                <footer th:replace="layout/plantilla :: footer"/>
+        </header>
     </body>
 </html>
