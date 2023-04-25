@@ -125,9 +125,9 @@
                                                 <label for="message-3b9a" class="u-form-control-hidden u-label">Cantidad de entradas</label>
                                                 <input placeholder="Cantidad de entradas" rows="4" cols="50" id="message-3b9a" name="message" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-input-4" required="required" type="text">
                                             </div>
-                                            <div class="u-align-center u-form-group u-form-submit">
-                                                <a href="carrito/listado" class="u-active-palette-2-light-3 u-border-none u-btn u-btn-submit u-button-style u-hover-palette-2-light-3 u-text-active-black u-text-black u-text-hover-black u-white u-btn-1"></a>
-                                                <input type="submit" value="submit" class="u-form-control-hidden" wfd-id="id111">
+                                            <div class="u-align-center u-form-group u-form-submit"> 
+                                                <a th:href="@{/carrito/listado}">Comprar</a> 
+                                                <input type="submit" value="submit" class="u-form-control-hidden" wfd-id="id111"> 
                                             </div>
                                             <div class="u-form-send-message u-form-send-success"> ¡GRACIAS POR SU COMPRA! </div>
                                             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
