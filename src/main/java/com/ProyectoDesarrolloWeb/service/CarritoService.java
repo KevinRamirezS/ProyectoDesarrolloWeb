@@ -6,5 +6,5 @@ public interface CarritoService {
 
     public Carrito getCarrito(Carrito carrito);
 
-    public Carrito getCarritoCliente(Long idCliente);
+    public Carrito getCarritoUsuario(Long idUsuario);
 }

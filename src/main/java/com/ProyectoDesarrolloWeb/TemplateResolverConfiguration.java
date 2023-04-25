@@ -68,7 +68,7 @@ public class TemplateResolverConfiguration {
         return templateResolver;
     }
     
-      @Bean
+    @Bean
     public SpringResourceTemplateResolver TemplateResolver_5() {
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
         templateResolver.setPrefix("templates/entradas/");
@@ -79,4 +79,5 @@ public class TemplateResolverConfiguration {
         templateResolver.setCheckExistence(true);
         return templateResolver;
     }
+
 }

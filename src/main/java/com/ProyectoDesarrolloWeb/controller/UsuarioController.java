@@ -19,7 +19,7 @@ public class UsuarioController {
     @Autowired
     UsuarioService usuarioService;
     
-    @GetMapping("/usuario/listado")
+    @GetMapping("/usuario/iniciarsesion")
     public String inicio(Model model) {
         var usuarios=usuarioService.getUsuarios();
         
@@ -31,7 +31,7 @@ public class UsuarioController {
         model.addAttribute("totalUsuarios",usuarios.size());
         
         model.addAttribute("usuarios",usuarios);
-        return "/usuario/listado";
+        return "/usuario/iniciarsesion";
     }
     
     @GetMapping("/usuario/nuevo")

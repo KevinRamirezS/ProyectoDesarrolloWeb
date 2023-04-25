@@ -18,13 +18,13 @@ public class Carrito implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCarrito;//Transforma en id_carrito
-    private Long idCliente;//Transforma en id_cliente
+    private Long idUsuario;//Transforma en id_cliente
 
     public Carrito() {
     }
 
-    public Carrito(Long idCliente) {
-        this.idCliente = idCliente;
+    public Carrito(Long idUsuario) {
+        this.idUsuario = idUsuario;
     }
     
     

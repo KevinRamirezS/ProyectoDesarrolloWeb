@@ -1,45 +1,115 @@
 <!DOCTYPE html>
-<html htmlns:th="http://www.thymeleaf.org" 
-      xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org" style="font-size: 16px;" lang="es">
     <head>
-        <title>Ticket Friend Online</title>
-        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <title>Entradas</title>
+        <link href="../css/entradas.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/intlTelInput.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/nicepage.css" rel="stylesheet" type="text/css"/>
+        <script src="../js/entradas/intlTelInput.min.js" type="text/javascript"></script>
+        <script src="../js/entradas/jquery.js" type="text/javascript"></script>
+        <script src="../js/entradas/nicepage.js" type="text/javascript"></script>
+        <script src="../js/entradas/utils.js" type="text/javascript"></script>
+        <meta name="theme-color" content="#478ac9">
+        <meta property="og:title" content="entradas">
+        <meta property="og:type" content="website">
+        <meta data-intl-tel-input-cdn-path="intlTelInput/">
     </head>
-    <body>
-        <header class="header">
-            <nav class="nav">
-                <a href="index.html" class="logo nav-link">Ticket Friend Online</a>
-                <ul class="nav-menu">
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="entradas/entradas">Puntos de Venta</a></li> 
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="acercade.html">Acerca de</a></li> 
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="ayuda.html">Ayuda</a></li> 
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="iniciarsesion.html">Iniciar sesión</a></li>
-                </ul>
-            </nav>
+    <body class="u-body u-xl-mode" data-lang="es">
+        <header class="u-clearfix u-custom-color-1 u-header u-header" id="sec-15a9">
+            <div class="u-clearfix u-sheet u-sheet-1">
+                <h3 class="u-text u-text-1">Ticket Friend</h3>
+                <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+                    <div class="u-custom-menu u-nav-container">
+                        <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="localhost:8083" style="padding: 10px 54px;">Home</a>
+                            </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="general/puntosdeventa.html" style="padding: 10px 54px;">Puntos de venta</a>
+                            </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="general/ayuda" style="padding: 10px 54px;">Ayuda</a>
+                            </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="usuario/iniciarsesion" style="padding: 10px 54px;">Inicio de Sesión</a>
+                            </li></ul>
+                    </div>
+                    <div class="u-custom-menu u-nav-container-collapse">
+                        <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+                            <div class="u-inner-container-layout u-sidenav-overflow">
+                                <div class="u-menu-close"></div>
+                                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="index.html">Home</a></li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="general/puntosdeventa">Puntos de venta</a></li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="general/ayuda">Ayuda</a></li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="usuario/iniciarsesion">Inicio de Sesión</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+                    </div>
+                </nav>
+            </div>
         </header>
-        <div class="container">
-            <h2 th:text="#{entrada.titulo}">Todos los Conciertos</h2>>
-            <br/>
-            <div th:if="${entradas != null and !entradas.empty}">
-                <table border="1">
-                    <thead>             
-                        <th th:text="#{entrada.descripcion}">Descripcion</th>
-                        <th th:text="#{entrada.precio}">Precios</th>
-                        <th th:text="#{entrada.existencias}">Existencias</th>
-                    </thead>
-                    <tbody>
-                        <tr th:each="entrada:${entradas}">
-                            <td th:text="${entrada.descripcion}"></td>
-                            <td th:text="${#numbers.formatDecimal(entrada.precio, 3, 2)}" style="text-align: right"></td>
-                            <td th:text="${entrada.existencias}"style="text-align: center"></td>
-                        </tr>
-                    </tbody>
-                </table>
+        <section class="u-align-center u-black u-clearfix u-section-1" id="carousel_e85a">
+            <div class="u-expanded-width u-shape u-shape-rectangle u-white u-shape-1"></div>
+            <div class="u-clearfix u-gutter-20 u-layout-wrap u-layout-wrap-1">
+            <div class="u-background-video u-expanded" style="">
+            </div>    
+                <div class="u-layout">    
+                    <div class="u-layout-row">
+                        <div class="u-size-15 u-size-30-md">
+                            <div class="u-layout-col">
+                                <img src="../imagenes/entradas/RicardoArjona.jpg" width="350" height="450"/>
+                            </div>
+                        </div>
+                        <div class="u-size-15 u-size-30-md">
+                            <div class="u-layout-col">
+                                <img src="../imagenes/entradas/MarcAnthony.jpg" width="350" height="350"/>
+                            </div>
+                        </div>
+                        <div class="u-size-15 u-size-30-md">
+                            <div class="u-layout-col">
+                                <img src="../imagenes/entradas/ColdPlay.jpg" width="350" height="450"/>
+                            </div>
+                        </div>
+                        <div class="u-size-15 u-size-30-md">
+                            <div class="u-layout-col">
+                                <img src="../imagenes/entradas/SinBandera.jpg" width="350" height="350"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div th:if="${entradas == null or entradas.empty}">
-                <p th:text="#{entrada.no_mostrar}">No hay eventos para esta fecha...</p>
+            <div class="u-list u-list-1">
+                <div class="u-repeater u-repeater-1">
+                    <div class="u-align-center u-container-style u-list-item u-palette-5-light-3 u-radius-20 u-repeater-item u-shape-round u-list-item-1">
+                        <div class="u-container-layout u-similar-container u-container-layout-9">
+                            <h5 class="u-text u-text-1">Ricardo arjona</h5>
+                            <p class="u-text u-text-palette-5-dark-2 u-text-2">Ha vendido más de 80 millones de copias de discos a lo largo de su carrera. Es considerado uno de los artistas más exitosos de Hispanoamérica</p>
+                            <a href="compraentradas" class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1">COMPRAR</a>
+                        </div>
+                    </div>
+                    <div class="u-align-center u-container-style u-list-item u-palette-5-light-3 u-radius-20 u-repeater-item u-shape-round u-list-item-2">
+                        <div class="u-container-layout u-similar-container u-container-layout-10">
+                            <h5 class="u-text u-text-3">Marc Anthony</h5>
+                            <p class="u-text u-text-palette-5-dark-2 u-text-4"> Es el artista de salsa tropical más vendido de todos los tiempos. Ganador de cuatro premios Grammy y ocho premios Grammy Latinos , ha vendido más de 12 millones de álbumes en todo el mundo. </p>
+                            <a href="compraentradas" class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-2">COMPRAR</a>
+                        </div>
+                    </div>
+                    <div class="u-align-center u-container-style u-list-item u-palette-5-light-3 u-radius-20 u-repeater-item u-shape-round u-list-item-3">
+                        <div class="u-container-layout u-similar-container u-container-layout-11">
+                            <h5 class="u-text u-text-5">ColdPlay</h5>
+                            <p class="u-text u-text-palette-5-dark-2 u-text-6">Con 100 millones de álbumes vendidos en todo el mundo, Coldplay es uno de los actos musicales más vendidos de todos los tiempos.</p>
+                            <a href="compraentradas" class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-3">COMPRAR</a>
+                        </div>
+                    </div>
+                    <div class="u-align-center u-container-style u-list-item u-palette-5-light-3 u-radius-20 u-repeater-item u-shape-round u-list-item-4">
+                        <div class="u-container-layout u-similar-container u-container-layout-12">
+                            <h5 class="u-text u-text-7">Sin Bandera</h5>
+                            <p class="u-text u-text-palette-5-dark-2 u-text-8">Sin Bandera es un dúo argentino-mexicano formado por el argentino Noel Schajris y el mexicano Leonel García en 2000.</p>
+                            <a href="compraentradas" class="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-4">COMPRAR</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
         <footer th:replace="layout/plantilla :: footer"/>
-    </body> 
+    </body>
 </html>

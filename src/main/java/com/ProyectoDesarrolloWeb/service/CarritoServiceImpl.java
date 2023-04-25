@@ -17,14 +17,14 @@ public class CarritoServiceImpl implements CarritoService {
     }
 
     @Override
-    public Carrito getCarritoCliente(Long idCliente) { //idCliente = 3
-        Carrito carritoCliente=carritoDao.findByIdCliente(idCliente).orElse(null);
+    public Carrito getCarritoUsuario(Long idUsuario) { //idUsuario = 3
+        Carrito carritoUsuario=carritoDao.findByIdUsuario(idUsuario).orElse(null);
         //Evaludar si existe el carrito sino lo mandamos a crear
-        if (carritoCliente == null){
-        Carrito carritoNuevo = new Carrito(idCliente);//idCarrito = 0, idCliente=3
-        carritoCliente = carritoDao.save(carritoNuevo);
+        if (carritoUsuario == null){
+        Carrito carritoNuevo = new Carrito(idUsuario);//idCarrito = 0, idUsuario=3
+        carritoUsuario = carritoDao.save(carritoNuevo);
         }
-        return carritoCliente;
+        return carritoUsuario;
     }
 
 }
