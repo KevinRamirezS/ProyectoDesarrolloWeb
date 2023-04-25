@@ -1,6 +1,8 @@
 package com.ProyectoDesarrolloWeb.controller;
 
 import com.ProyectoDesarrolloWeb.domain.Usuario;
+import com.ProyectoDesarrolloWeb.service.CarritoDetalleService;
+import com.ProyectoDesarrolloWeb.service.CarritoService;
 import com.ProyectoDesarrolloWeb.service.UsuarioService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,12 @@ public class IndexController {
     
     @Autowired
     UsuarioService usuarioService;
+    
+    @Autowired
+    CarritoService carritoService;
+    
+    @Autowired
+    CarritoDetalleService carritoDetalleService;
     
     @GetMapping("/")
     public String inicio(Model model) {
